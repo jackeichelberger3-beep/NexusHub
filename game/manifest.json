@@ -1,0 +1,39 @@
+{
+  "title": "NEXUS",
+  "subtitle": "Game Hub",
+  "games": [
+    {
+      "slug": "pong",
+      "title": "Pong Duel",
+      "category": "Arcade",
+      "icon": "🏓",
+      "accent": "#ff6b6b",
+      "players": "1 Player",
+      "tags": ["Mouse", "Touch"],
+      "description": "A vertical rally against the machine. First to seven points takes the match.",
+      "path": "games/pong/index.html"
+    },
+    {
+      "slug": "htmlstudio",
+      "title": "Sovern HTML Studio",
+      "category": "Internal",
+      "icon": "©",
+      "accent": "#ff6b6b",
+      "players": "1 Player",
+      "tags": ["Mouse", "Touch"],
+      "description": "A File Viewer Used to open other games.",
+      "path": "games/Fileviewer/index.html"
+    },
+    {
+      "slug": "memory-match",
+      "title": "Memory Match",
+      "category": "Puzzle",
+      "icon": "🃏",
+      "accent": "#ffb020",
+      "players": "1 Player",
+      "tags": ["Mouse", "Touch"],
+      "description": "Flip cards to find all eight matching pairs in as few moves as you can manage.",
+      "path": "games/memory-match/index.html"
+    }
+  ]
+}

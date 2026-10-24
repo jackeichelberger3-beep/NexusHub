@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>NEXUS · Game Hub</title>
+<meta name="description" content="A static game hub with a Roblox-style circular menu button, collapsible sidebar, full-screen game player, dark mode and a one-line game registry." />
+<meta name="theme-color" content="#d1d3d4" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script>
+  /* Apply the saved theme before paint so there is no flash. */
+  (function () {
+    try {
+      var saved = JSON.parse(localStorage.getItem('nexus.settings') || '{}');
+      var mode = saved.theme || 'system';
+      var dark = mode === 'dark' || (mode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+      var scales = { compact: 0.94, comfortable: 1, large: 1.08 };
+      if (saved.scale) document.documentElement.style.setProperty('--ui-scale', String(scales[saved.scale] || 1));
+      var accents = { pink: '#ff5fc0', cyan: '#00f0ff', violet: '#7c5cff', lime: '#34d399' };
+      if (saved.accent && accents[saved.accent]) document.documentElement.style.setProperty('--brand', accents[saved.accent]);
+    } catch (err) { /* first visit */ }
+  })();
+</script>
+</head>
+<body>
+  <div class="shell" id="shell" data-side="left">
+    <aside class="panel-wrap" id="panelWrap" hidden>
+      <div class="rail" id="rail"></div>
+      <div class="panel" id="panel"></div>
+    </aside>
+    <main class="stage" id="stage"></main>
+  </div>
+
+  <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"></button>
+  <button type="button" class="scrim" id="scrim" hidden aria-label="Close menu"></button>
+
+  <script src="config.js"></script>
+  <script src="games.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

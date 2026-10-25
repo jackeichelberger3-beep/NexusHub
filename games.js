@@ -88,6 +88,11 @@ addGame('memory-match', 'Memory Match', {
   description: 'Flip cards to find all eight matching pairs in as few moves as you can manage.'
 });
 
+addGame('fileviewer', 'File Viewer', {
+  category: 'Service', icon: '🃏', accent: '#ffb020', tags: ['Mouse', 'Touch'],
+  description: 'Open any html game.'
+});
+
 /* --------------------------------------------------------------------
    Shared loader — merges the list above with games/manifest.json.
    The hub and the standalone player both use it.

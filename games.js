@@ -58,31 +58,6 @@ function addGame(slug, title, options) {
 
 /* ---------------------------------------------- your games start here */
 
-addGame('neon-snake', 'Neon Snake', {
-  category: 'Arcade', icon: '🐍', accent: '#00f0ff', tags: ['Keyboard', 'Touch'],
-  description: 'Devour the glow orbs and grow longer without clipping your own tail. Every bite raises the speed.'
-});
-
-addGame('breakout', 'Breakout', {
-  category: 'Arcade', icon: '🧱', accent: '#34d399', tags: ['Mouse', 'Touch'],
-  description: 'Clear the wall of bricks with a bouncing ball. Miss it and you lose a life — three chances only.'
-});
-
-addGame('pong', 'Pong Duel', {
-  category: 'Arcade', icon: '🏓', accent: '#ff6b6b', tags: ['Mouse', 'Touch'],
-  description: 'A vertical rally against the machine. First to seven points takes the match.'
-});
-
-addGame('2048', '2048', {
-  category: 'Puzzle', icon: '🔢', accent: '#ff5fc0', tags: ['Keyboard', 'Touch'],
-  description: 'Slide and merge matching tiles until you forge the 2048 block. No moves left means it is over.'
-});
-
-addGame('minesweeper', 'Minesweeper', {
-  category: 'Puzzle', icon: '💣', accent: '#7c5cff', tags: ['Mouse', 'Touch'],
-  description: 'Deduce where the ten mines hide. Open every safe square without triggering a single one.'
-});
-
 addGame('memory-match', 'Memory Match', {
   category: 'Puzzle', icon: '🃏', accent: '#ffb020', tags: ['Mouse', 'Touch'],
   description: 'Flip cards to find all eight matching pairs in as few moves as you can manage.'
